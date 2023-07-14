@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     'rest_framework',
+    'core',
+    'interested_points'
 ]
 
 MIDDLEWARE = [
