@@ -45,7 +45,8 @@ INSTALLED_APPS = [
 INSTALLED_APPS += [
     'rest_framework',
     'core',
-    'interested_points'
+    'interested_points',
+    'feedback'
 ]
 
 MIDDLEWARE = [
