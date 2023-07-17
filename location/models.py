@@ -11,4 +11,4 @@ class Location(models.Model):
     longitude  = models.FloatField(null=True,   verbose_name="Longitude")
 
     def __str__(self):
-        return self.addres
+        return self.address

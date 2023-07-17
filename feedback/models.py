@@ -11,5 +11,5 @@ class Feedback(models.Model):
     approved = models.BooleanField(default=True, verbose_name="Aprovado")
 
     def __str__(self):
-        return self.user.first_name
+        return self.user.username
     
