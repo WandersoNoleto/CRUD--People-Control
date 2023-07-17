@@ -11,7 +11,7 @@ class TourismSpot(models.Model):
     approved  = models.BooleanField(default=False, verbose_name="Aprovado")
     resourses = models.ManyToManyField(Resourse, verbose_name="Recursos")
     feedbacks = models.ManyToManyField(Feedback, verbose_name="Avaliações")
-    location  = models.ForeignKey(Location, on_delete=models.CASCADE, verbose_name="Localização")
+    location  = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, blank=True, verbose_name="Localização")
 
     def __str__(self):
         return self.name
