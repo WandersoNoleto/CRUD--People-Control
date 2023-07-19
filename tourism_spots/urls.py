@@ -8,7 +8,7 @@ from interested_points.api.viewsets import ResourseViewSet
 from location.api.viewsets import LocationViewSet
 
 router = routers.DefaultRouter()
-router.register(r'tourismspots', TourismSpotViewSet)
+router.register(r'tourismspots', TourismSpotViewSet, basename='TourismSpot')
 router.register(r'resourses', ResourseViewSet)
 router.register(r'locations', LocationViewSet)
 router.register(r'feedbacks', FeedbackViewSet)

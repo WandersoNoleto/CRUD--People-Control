@@ -6,6 +6,7 @@ from .serializers import TourismSpotSerializer
 
 
 class TourismSpotViewSet(ModelViewSet):
-    queryset = TourismSpot.objects.all()
     serializer_class = TourismSpotSerializer
     
+    def get_queryset(self):
+        return TourismSpot.objects.filter(approved=True)
