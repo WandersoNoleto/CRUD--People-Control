@@ -4,8 +4,8 @@ from rest_framework import routers
 
 from core.api.viewsets import TourismSpotViewSet
 from feedback.api.viewsets import FeedbackViewSet
-from interested_points.api.viewsets import ResourseViewSet
 from location.api.viewsets import LocationViewSet
+from tourist_resources.api.viewsets import ResourseViewSet
 
 router = routers.DefaultRouter()
 router.register(r'tourismspots', TourismSpotViewSet, basename='TourismSpot')

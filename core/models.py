@@ -1,8 +1,8 @@
 from django.db import models
 
 from feedback.models import Feedback
-from interested_points.models import Resourse
 from location.models import Location
+from tourist_resources.models import Resourse
 
 
 class TourismSpot(models.Model):

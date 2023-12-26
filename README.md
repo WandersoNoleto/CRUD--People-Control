@@ -1,5 +1,5 @@
 <div>
-  <img src="documentation/assets/ApiLogo.png"/ >
+  <img src="documentation/assets/TouristSpotLogo.png"/ >
   
 </div>
  

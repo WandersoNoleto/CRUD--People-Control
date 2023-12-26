@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class InterestedPointsConfig(AppConfig):
+class TouristResourcesConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'interested_points'
+    name = 'tourist_resources'

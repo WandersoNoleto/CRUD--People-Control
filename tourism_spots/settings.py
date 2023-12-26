@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 INSTALLED_APPS += [
     'rest_framework',
     'core',
-    'interested_points',
+    'tourist_resources',
     'feedback',
     'location'
 ]
