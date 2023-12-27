@@ -12,7 +12,8 @@ class TourismSpot(models.Model):
     resourses = models.ManyToManyField(Resourse, verbose_name="Recursos")
     feedbacks = models.ManyToManyField(Feedback, verbose_name="Avaliações")
     location  = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, blank=True, verbose_name="Localização")
-
+    image     = models.ImageField(upload_to='pontos_turisticos', null=True, blank=True)
+    
     def __str__(self):
         return self.name
     
