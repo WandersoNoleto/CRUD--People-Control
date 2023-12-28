@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 INSTALLED_APPS += [
     'rest_framework',
     'django_filters',
+    'rest_framework.authtoken',
     'core',
     'tourist_resources',
     'feedback',
