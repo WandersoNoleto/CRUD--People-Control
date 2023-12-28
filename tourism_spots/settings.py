@@ -44,10 +44,11 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     'rest_framework',
+    'django_filters',
     'core',
     'tourist_resources',
     'feedback',
-    'location'
+    'location',
 ]
 
 MIDDLEWARE = [
