@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 
-from core.models import TourismSpot
+from spots.models import TourismSpot
 
 from .serializers import TourismSpotSerializer
 

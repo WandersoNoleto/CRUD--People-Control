@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from core.models import TourismSpot
+from spots.models import TourismSpot
 
 
 class TourismSpotSerializer(ModelSerializer):

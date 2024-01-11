@@ -46,10 +46,8 @@ INSTALLED_APPS += [
     'rest_framework',
     'django_filters',
     'rest_framework.authtoken',
-    'core',
-    'tourist_resources',
+    'spots',
     'feedback',
-    'location',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'tourism_spots.urls'
+ROOT_URLCONF = 'tourist_spots.urls'
 
 TEMPLATES = [
     {
@@ -80,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tourism_spots.wsgi.application'
+WSGI_APPLICATION = 'tourist_spots.wsgi.application'
 
 
 # Database
