@@ -23,13 +23,13 @@ What things you need to install the software and how to install them
 
 First, clone the repository
 ```
-git clone https://github.com/WandersoNoleto/TourismSpots-Api.git
+git clone https://github.com/WandersoNoleto/TouristSpots-Api.git
 ```
 Install the dependencies listed in the requirements.txt file
 ```
 pip install -r requirements.txt
 ```
-###### :key: Create a .env file and set the variables according to the [.env.example](https://github.com/WandersoNoleto/TourismSpots-Api/blob/main/tourism_spots/.env.example).
+###### :key: Create a .env file and set the variables according to the [.env.example](https://github.com/WandersoNoleto/TouristSpots-Api/blob/main/tourism_spots/.env.example).
 Generate a new Django key and assign it to SECRET_KEY (in Python CLI)
 ```
 from django.core.management import utils
