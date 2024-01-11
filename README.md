@@ -1,4 +1,4 @@
-![apresentation-tip](https://github.com/WandersoNoleto/TourismSpots-Api/blob/main/documentation/assets/logo-api-tourismSpots.png)
+![apresentation-tip](https://github.com/WandersoNoleto/TourismSpots-Api/blob/main/documentation/assets/logo-api.png)
 
 ## TourismSpots-API ![Static Badge](https://img.shields.io/badge/status-developing-yellow)
 
