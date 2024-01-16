@@ -12,7 +12,7 @@ from weather_manager.api.viewsets import WeatherAPIViewSet
 router = routers.DefaultRouter()
 router.register(r'touristspots', TouristSpotViewSet, basename='TouristSpot')
 router.register(r'feedbacks', FeedbackViewSet)
-router.register(r'weather', WeatherAPIViewSet, basename="weather-api")
+router.register(r'openWeather', WeatherAPIViewSet,basename="weather-api")
 
 
 
