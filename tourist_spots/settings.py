@@ -48,6 +48,7 @@ INSTALLED_APPS += [
     'rest_framework.authtoken',
     'spots',
     'feedback',
+    'wheather_manager'
 ]
 
 MIDDLEWARE = [

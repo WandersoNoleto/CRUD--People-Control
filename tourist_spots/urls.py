@@ -6,10 +6,10 @@ from rest_framework import routers
 from rest_framework.authtoken import views
 
 from feedback.api.viewsets import FeedbackViewSet
-from spots.api.viewsets import TourismSpotViewSet
+from spots.api.viewsets import TouristSpotViewSet
 
 router = routers.DefaultRouter()
-router.register(r'tourismspots', TourismSpotViewSet, basename='TourismSpot')
+router.register(r'touristspots', TouristSpotViewSet, basename='TouristSpot')
 router.register(r'feedbacks', FeedbackViewSet)
 
 

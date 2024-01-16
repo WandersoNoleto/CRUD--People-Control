@@ -1,11 +1,11 @@
 from rest_framework.serializers import ModelSerializer
 
-from spots.models import TourismSpot
+from spots.models import TouristSpot
 
 
-class TourismSpotSerializer(ModelSerializer):
+class TouristSpotSerializer(ModelSerializer):
     class Meta:
-        model = TourismSpot
+        model = TouristSpot
         fields = ('id', 'name', 'description', 'image')
 
     

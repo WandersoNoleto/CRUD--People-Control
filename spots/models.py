@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class TourismSpot(models.Model):
+class TouristSpot(models.Model):
     name        = models.CharField(max_length=150, verbose_name="Nome")
     description = models.TextField(verbose_name="Descrição")
     resourses   = models.TextField(verbose_name="Recursos")
