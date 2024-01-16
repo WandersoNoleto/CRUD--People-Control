@@ -1,3 +1,5 @@
+from rest_framework.decorators import action
+from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from spots.models import TouristSpot
@@ -23,20 +25,32 @@ class TouristSpotViewSet(ModelViewSet):
 
         return queryset
     
-    def list(self, request, *args, **kwargs):
-        return super(TouristSpotViewSet, self).list(request, *args, **kwargs)
+    @action(detail=False, methods=['GET'])
+    def list_by_city(self, request, *args, **kwargs):
+        city = self.request.query_params.get('city', None)
+        if not city:
+            return Response({'error': 'City parameter is required'}, status=400)
 
-    def create(self, request, *args, **kwargs):
-        return super(TouristSpotViewSet, self).create(request, *args, **kwargs)
+        queryset   = TouristSpot.objects.filter(city__iexact=city)
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
+    
+    @action(detail=False, methods=['GET'])
+    def list_by_state(self, request, *args, **kwargs):
+        state = self.request.query_params.get('state', None)
+        if not state:
+            return Response({'error': 'State parameter is required'}, status=400)
 
-    def destroy(self, request, *args, **kwargs):
-        return super(TouristSpotViewSet, self).destroy(request, *args, **kwargs)
+        queryset   = TouristSpot.objects.filter(state__iexact=state)
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
+    
+    @action(detail=False, methods=['GET'])
+    def list_by_country(self, request, *args, **kwargs):
+        country = self.request.query_params.get('country', None)
+        if not country:
+            return Response({'error': 'Country parameter is required'}, status=400)
 
-    def retrieve(self, request, *args, **kwargs):
-        return super(TouristSpotViewSet, self).retrieve(request, *args, **kwargs)
-
-    def update(self, request, *args, **kwargs):
-        return super(TouristSpotViewSet, self).update(request, *args, **kwargs)
-
-    def partial_update(self, request, *args, **kwargs):
-        return super(TouristSpotViewSet, self).partial_update(request, *args, **kwargs)
+        queryset   = TouristSpot.objects.filter(country__iexact=country)
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
