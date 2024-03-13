@@ -1,5 +1,5 @@
 """
-WSGI config for tourism_spots project.
+WSGI config for tourist_spots project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

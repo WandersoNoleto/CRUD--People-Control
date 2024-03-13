@@ -1,5 +1,5 @@
 """
-ASGI config for tourism_spots project.
+ASGI config for tourist_spots project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
