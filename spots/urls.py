@@ -1,9 +1,12 @@
 from django.urls import path
 
-from spots.api.viewsets import TouristSpotViewSet
+from spots import views
+from rest_framework import routers
 
-urlpatterns = [
-    path('by-city', TouristSpotViewSet.as_view({'get': 'list_by_city'}), name='tourist-spot-list-by-city'),
-    path('by-state', TouristSpotViewSet.as_view({'get': 'list_by_state'}), name='tourist-spot-list-by-state'),
-    path('by-country', TouristSpotViewSet.as_view({'get': 'list_by_country'}), name='tourist-spot-list-by-country'),
-]
+app_name='spots'
+
+router_spots = routers.SimpleRouter()
+router_spots.register('', views.TouristSpotViewSet, basename='spots')
+
+
+urlpatterns = router_spots.urls

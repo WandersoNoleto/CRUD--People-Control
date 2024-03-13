@@ -40,15 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
-
-INSTALLED_APPS += [
     'rest_framework',
     'django_filters',
     'rest_framework.authtoken',
+]
+
+INSTALLED_APPS += [
     'spots',
-    'feedback',
-    'weather_manager'
 ]
 
 MIDDLEWARE = [
