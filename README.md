@@ -1,6 +1,6 @@
 ![apresentation-tip](https://github.com/WandersoNoleto/TourismSpots-Api/blob/main/documentation/assets/logo-api.png)
 
-## TourismSpots-API ![Static Badge](https://img.shields.io/badge/status-developing-yellow)
+## TourismSpots-API 
 
 
 
@@ -12,9 +12,32 @@ This API enables users to effortlessly gather details about different tourist sp
 ### :clipboard: Tecnologies and Tolls
 * Python
 * Django REST Framework
+  
+### Features
+* CRUD operations for tourist spots
+* Filtering tourist spots by city, state or country
+* Provide a location in latitude and longitude and search for nearby points
 
-## Getting Started
+## Model
 
+Below we have the Django ORM related to the tourist spot model:
+![RecipeModel](https://github.com/WandersoNoleto/TouristSpots-Api/blob/main/documentation/assets/SpotsModel.png)
+After being serialized, this is how the data travels via JSON:
+```
+{
+	"id": 1,
+	"name": "Sugarloaf Mountain",
+	"description": "Sugarloaf Mountain is a peak situated in Rio de Janeiro, Brazil.",
+	"resources": "Hiking trails, cable cars, breathtaking views",
+	"city": "Rio de Janeiro",
+	"state": "Rio de Janeiro",
+	"country": "Brazil",
+	"image": null,
+	"latitude": -22.9519,
+	"longitude": -43.1654
+}
+```
+## :gear: Installation Guide
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 
@@ -41,3 +64,13 @@ Use the command to run the service
 python3 manage.py runserver
 ```
 
+## :world_map: API Endpoints
+
+| HTTP Verbs | Endpoints | Action |
+| --- | --- | --- |
+| GET | /spots/| View all tourist spots / Filter: name, id, city, state and country|
+| GET | /spots/int:id/ | View tourist spot details |
+| POST | /spots/| Register a new tourist spot |
+| PATCH | /spots/int:id/| To update tourist spot values |
+| DELETE |  /spots/int:id/ | Delete a tourist spot |
+| DELETE |  /spots/nearby/ | Provide latitude and longitude to search for nearby points / radius (optional) |
