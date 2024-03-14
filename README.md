@@ -4,16 +4,19 @@
 
 ## About
 
-This API enables users to effortlessly gather details about different tourist spots and register new points of interest, along with their key attractions. Designed with travel guides in mind, it provides a seamless experience for creating comprehensive travel itineraries. Notably, our API operates independently, devoid of any integrated databases, granting users the flexibility to manage and organize their tourist data as they see fit. Whether you're developing a travel app or crafting a digital travel guide, this API is your go-to solution for efficiently handling tourist information without the constraints of a pre-existing database
+This API empowers users to effortlessly gather details about various tourist spots and register new points of interest, along with their key attractions. Designed with travel guides in mind, it provides a seamless experience for creating comprehensive travel itineraries. Whether you're developing a travel app or crafting a digital travel guide, this API is your go-to solution for efficiently handling tourist information without the constraints of a pre-existing database. Additionally, it integrates with the Open Weather API to provide weather information for the tourist spots.
 
 ### :clipboard: Tecnologies and Tolls
 * Python
 * Django REST Framework
+* Open Weather API | [click here](https://openweathermap.org/api) for more details
   
 ### Features
 * CRUD operations for tourist spots
 * Filtering tourist spots by city, state or country
-* Provide a location in latitude and longitude and search for nearby points
+* Provide a location in latitude and longitude to search for nearby points
+* Get the current weather of a tourist spot
+* Get detailed weather or a summary for the next five days
 
 ## Model
 
@@ -50,6 +53,7 @@ Install the dependencies listed in the requirements.txt file
 pip install -r requirements.txt
 ```
 ###### :key: Create a .env file and set the variables according to the [.env.example](https://github.com/WandersoNoleto/TouristSpots-Api/blob/main/tourism_spots/.env.example).
+###### :key: To get an Open Weather API key [click here](https://openweathermap.org/price)
 Generate a new Django key and assign it to SECRET_KEY (in Python CLI)
 ```
 from django.core.management import utils
@@ -70,4 +74,7 @@ python3 manage.py runserver
 | POST | /tourist-spots/| Register a new tourist spot |
 | PATCH | /tourist-spots/int:id/| To update tourist spot values |
 | DELETE |  /tourist-spots/int:id/ | Delete a tourist spot |
-| DELETE |  /tourist-spots/nearby/ | Provide latitude and longitude to search for nearby points / radius (optional) |
+| GET |  /tourist-spots/nearby/ | Provide latitude and longitude to search for nearby points / radius (optional) |
+| GET |  /tourist-spots/weather/int:id/ | To get a current weather data for a tourist spot |
+| GET |  /tourist-spots/weather-5/int:id/ | Get weather data for a tourist spot for the next 5 days (3 hours) |
+| GET |  /tourist-spots/weather-5-summary/int:id/ | Get weather summary data for a tourist spot for the next 5 days |
