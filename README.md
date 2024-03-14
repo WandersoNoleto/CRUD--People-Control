@@ -1,9 +1,6 @@
 ![apresentation-tip](https://github.com/WandersoNoleto/TourismSpots-Api/blob/main/documentation/assets/logo-api.png)
 
-## TourismSpots-API 
-
-
-
+## TouristSpots-API 
 
 ## About
 
@@ -68,9 +65,9 @@ python3 manage.py runserver
 
 | HTTP Verbs | Endpoints | Action |
 | --- | --- | --- |
-| GET | /spots/| View all tourist spots / Filter: name, id, city, state and country|
-| GET | /spots/int:id/ | View tourist spot details |
-| POST | /spots/| Register a new tourist spot |
-| PATCH | /spots/int:id/| To update tourist spot values |
-| DELETE |  /spots/int:id/ | Delete a tourist spot |
-| DELETE |  /spots/nearby/ | Provide latitude and longitude to search for nearby points / radius (optional) |
+| GET | /tourist-spots/| View all tourist spots / Filter: name, id, city, state and country|
+| GET | /tourist-spots/int:id/ | View tourist spot details |
+| POST | /tourist-spots/| Register a new tourist spot |
+| PATCH | /tourist-spots/int:id/| To update tourist spot values |
+| DELETE |  /tourist-spots/int:id/ | Delete a tourist spot |
+| DELETE |  /tourist-spots/nearby/ | Provide latitude and longitude to search for nearby points / radius (optional) |
